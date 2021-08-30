@@ -37,6 +37,7 @@ const siteContent = {
   },
 };
 
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -44,11 +45,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //nav section
 const nav = document.querySelector("nav");
 const navLinks = document.querySelectorAll('a');
-
-navLinks.forEach((item, index) => {
-  item.textContent = siteContent["nav"][`nav-item-${[index + 1]}`]
-  item.style.color = "green";
-});
 //nav section - append + prepend
 const extraLink1 = document.createElement('a')
 extraLink1.className = "nav-item-7";
@@ -58,6 +54,11 @@ const extraLink2 = document.createElement('a')
 extraLink2.className = "nav-item-9";
 extraLink2.textContent = "Boppity";
 nav.prepend(extraLink2);
+
+navLinks.forEach((item, index) => {
+  item.textContent = siteContent["nav"][`nav-item-${[index + 1]}`]
+  item.style.color = "green";
+});
 
 
 //cta
